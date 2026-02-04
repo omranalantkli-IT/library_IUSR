@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Library Lite - Dashboard</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="container row">
+            <div class="brand">
+                <span class="logo"></span>
+                <span>Library Lite</span>
+            </div>
+            <nav class="nav">
+                <a class="active" href="index.html">الرئيسية</a>
+                <a href="books.html">الكتب</a>
+                <a href="members.html">الأعضاء</a>
+                <a href="loans.html">الإعارات</a>
+                <a href="add-book.html">إضافة كتاب</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <span class="badge"><span class="dot"></span> واجهة نظام مكتبة (HTML + CSS)</span>
+            <h1>لوحة تحكم بسيطة لإدارة المكتبة</h1>
+            <p>
+                هذا المشروع مخصص للعمل الجماعي والتوثيق وإدارة المهام باستخدام Git/GitHub و Jira.
+                الواجهة جاهزة للتطوير لاحقاً (إضافة JS أو Backend إذا حبيتوا).
+            </p>
+        </section>
+
+        <section class="kpis">
+            <div class="kpi">
+                <div class="label">إجمالي الكتب</div>
+                <div class="value">120</div>
+            </div>
+            <div class="kpi">
+                <div class="label">كتب متاحة</div>
+                <div class="value">86</div>
+            </div>
+            <div class="kpi">
+                <div class="label">إعارات فعالة</div>
+                <div class="value">21</div>
+            </div>
+            <div class="kpi">
+                <div class="label">أعضاء</div>
+                <div class="value">48</div>
+            </div>
+        </section>
+
+        <hr class="sep" />
+
+        <section class="grid cols-2">
+            <div class="card">
+                <h3>آخر الكتب المضافة</h3>
+                <p>واجهة عرض بطاقات الكتب، مع حالة (متاح/معار).</p>
+                <div style="margin-top:12px">
+                    <a class="btn primary" href="books.html">اذهب إلى الكتب</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>مهام الفريق</h3>
+                <p>اربطوا المهام مع Jira: To Do / In Progress / Done.</p>
+                <div style="margin-top:12px">
+                    <a class="btn" href="loans.html">عرض الإعارات</a>
+                    <a class="btn" href="members.html">عرض الأعضاء</a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <hr class="sep" />
+            <div>© Library Lite — مشروع تعليمي للعمل الجماعي (GitHub + Jira + Documentation)</div>
+        </footer>
+    </main>
+
+</body>
+
+</html>
