@@ -1,142 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>الكتب</title>
-  <link rel="stylesheet" href="assets/css/books.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Library Lite - الكتب</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-
 <body>
 
-  <!-- ===== Header ===== -->
-  <header class="page-header">
-    <div class="header-left">
-      <h1 class="page-title">الكتب</h1>
-      <p class="page-subtitle">إدارة قائمة الكتب وعرض حالتها بسهولة</p>
-    </div>
+<header class="topbar">
+  <div class="container row">
+    <div class="brand"><span class="logo"></span><span>Library Lite</span></div>
+    <nav class="nav">
+      <a href="index.html">الرئيسية</a>
+      <a class="active" href="books.html">الكتب</a>
+      <a href="members.html">الأعضاء</a>
+      <a href="loans.html">الإعارات</a>
+      <a href="add-book.html">إضافة كتاب</a>
+    </nav>
+  </div>
+</header>
 
-    <div class="header-actions">
-      <a href="add-book.html" class="btn primary">
-        + إضافة كتاب
-      </a>
-    </div>
-  </header>
-
-  <!-- ===== Toolbar ===== -->
-  <section class="toolbar">
-    <div class="search-box">
-      <span class="search-icon">🔎</span>
-      <input type="text" placeholder="ابحث عن كتاب..." class="search-input" />
-    </div>
-
-    <select class="filter-select">
-      <option value="all">كل الكتب</option>
-      <option value="available">متاح</option>
-      <option value="borrowed">معار</option>
-    </select>
+<main class="container">
+  <section class="hero">
+    <h1>قائمة الكتب</h1>
+    <p>بحث/فلترة (واجهة فقط). لاحقاً يمكن ربطها ببيانات حقيقية.</p>
   </section>
 
-  <!-- ===== Books Grid ===== -->
-  <main class="books-grid">
+  <div class="toolbar">
+    <div class="search">
+      <input type="search" placeholder="ابحث عن كتاب (عنوان / مؤلف)..." />
+      <select>
+        <option>كل الحالات</option>
+        <option>متاح</option>
+        <option>معار</option>
+      </select>
+    </div>
+    <a class="btn primary" href="add-book.html">+ إضافة كتاب</a>
+  </div>
 
-    <!-- Book 1 -->
-    <article class="book-card">
-      <div class="book-thumb">
-        <img src="assets/images/books/clean-code.jpg" alt="Clean Code">
-        <span class="badge available">متاح</span>
-      </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>العنوان</th>
+        <th>المؤلف</th>
+        <th>التصنيف</th>
+        <th>الحالة</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Clean Code</td>
+        <td>Robert C. Martin</td>
+        <td>برمجة</td>
+        <td><span class="status s-available"><span class="mini"></span> متاح</span></td>
+      </tr>
+      <tr>
+        <td>Design Patterns</td>
+        <td>GoF</td>
+        <td>هندسة برمجيات</td>
+        <td><span class="status s-borrowed"><span class="mini"></span> معار</span></td>
+      </tr>
+      <tr>
+        <td>Atomic Habits</td>
+        <td>James Clear</td>
+        <td>تطوير ذات</td>
+        <td><span class="status s-available"><span class="mini"></span> متاح</span></td>
+      </tr>
+      <tr>
+        <td>Database Systems</td>
+        <td>Elmasri</td>
+        <td>قواعد بيانات</td>
+        <td><span class="status s-borrowed"><span class="mini"></span> معار</span></td>
+      </tr>
+    </tbody>
+  </table>
 
-      <div class="book-body">
-        <h3 class="book-title">Clean Code</h3>
-        <p class="book-desc">كتاب يساعدك على كتابة كود نظيف وقابل للصيانة.</p>
-
-        <div class="book-meta">
-          <span>✍️ Robert C. Martin</span>
-          <span>📚 برمجة</span>
-        </div>
-
-        <div class="book-actions">
-          <button class="btn ghost">عرض</button>
-          <button class="btn warning">تعديل</button>
-          <button class="btn danger">حذف</button>
-        </div>
-      </div>
-    </article>
-
-    <!-- Book 2 -->
-    <article class="book-card">
-      <div class="book-thumb">
-        <img src="assets/images/books/design-patterns.jpg" alt="Design Patterns">
-        <span class="badge borrowed">معار</span>
-      </div>
-
-      <div class="book-body">
-        <h3 class="book-title">Design Patterns</h3>
-        <p class="book-desc">مرجع أساسي لأنماط التصميم وكيفية تطبيقها عملياً.</p>
-
-        <div class="book-meta">
-          <span>✍️ GoF</span>
-          <span>📚 هندسة برمجيات</span>
-        </div>
-
-        <div class="book-actions">
-          <button class="btn ghost">عرض</button>
-          <button class="btn warning">تعديل</button>
-          <button class="btn danger">حذف</button>
-        </div>
-      </div>
-    </article>
-
-    <!-- Book 3 -->
-    <article class="book-card">
-      <div class="book-thumb">
-        <img src="assets/images/books/refactoring.jpg" alt="Refactoring">
-        <span class="badge available">متاح</span>
-      </div>
-
-      <div class="book-body">
-        <h3 class="book-title">Refactoring</h3>
-        <p class="book-desc">تعلم تحسين بنية الكود بدون تغيير السلوك.</p>
-
-        <div class="book-meta">
-          <span>✍️ Martin Fowler</span>
-          <span>📚 تطوير</span>
-        </div>
-
-        <div class="book-actions">
-          <button class="btn ghost">عرض</button>
-          <button class="btn warning">تعديل</button>
-          <button class="btn danger">حذف</button>
-        </div>
-      </div>
-    </article>
-
-    <!-- Book 4 -->
-    <article class="book-card">
-      <div class="book-thumb">
-        <img src="assets/images/books/algorithms.jpg" alt="Algorithms">
-        <span class="badge borrowed">معار</span>
-      </div>
-
-      <div class="book-body">
-        <h3 class="book-title">Algorithms</h3>
-        <p class="book-desc">خوارزميات وهياكل بيانات بأسلوب واضح ومفيد.</p>
-
-        <div class="book-meta">
-          <span>✍️ Sedgewick</span>
-          <span>📚 علوم حاسوب</span>
-        </div>
-
-        <div class="book-actions">
-          <button class="btn ghost">عرض</button>
-          <button class="btn warning">تعديل</button>
-          <button class="btn danger">حذف</button>
-        </div>
-      </div>
-    </article>
-
-  </main>
+  <footer class="footer">
+    <hr class="sep" />
+    <div>ملاحظة: هذه صفحة واجهة فقط — التطوير القادم يمكن يكون JS/Backend.</div>
+  </footer>
+</main>
 
 </body>
 </html>
