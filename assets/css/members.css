@@ -1,0 +1,258 @@
+/* =========================
+   Members Page (RTL)
+========================= */
+
+.members-page{
+  padding-top: 18px;
+}
+
+.page-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 18px 0 14px;
+}
+
+.page-head .title{
+  margin:0;
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: .2px;
+}
+
+.page-head .subtitle{
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.page-head .actions{
+  display:flex;
+  gap:10px;
+  flex-wrap: wrap;
+  justify-content:flex-end;
+}
+
+/* Toolbar */
+.toolbar{
+  display:flex;
+  gap: 12px;
+  align-items:center;
+  flex-wrap: wrap;
+  margin: 14px 0 18px;
+}
+
+.search-box{
+  position: relative;
+  flex: 1;
+  min-width: 260px;
+}
+
+.search-box .icon{
+  position:absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: .75;
+  pointer-events:none;
+}
+
+.search-input{
+  width: 100%;
+  padding: 12px 14px;
+  padding-right: 40px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  outline: none;
+  background: rgba(255,255,255,.04);
+  color: var(--text);
+  transition: .2s ease;
+}
+
+.search-input::placeholder{
+  color: rgba(234,240,255,.55);
+}
+
+.search-input:focus{
+  border-color: rgba(124,58,237,.45);
+  box-shadow: 0 0 0 4px rgba(124,58,237,.18);
+}
+
+.filter-select{
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  outline:none;
+  background: rgba(255,255,255,.04);
+  color: var(--text);
+  min-width: 170px;
+}
+
+/* KPIs smaller spacing */
+.kpis.mini{
+  margin-top: 6px;
+}
+
+/* Grid */
+.members-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 16px;
+  margin: 18px 0 10px;
+}
+
+/* Card */
+.member-card{
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow:hidden;
+}
+
+.member-head{
+  display:flex;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 14px 12px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  background: linear-gradient(180deg, rgba(255,255,255,.06), transparent);
+}
+
+.avatar{
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight: 900;
+  background: linear-gradient(135deg, rgba(124,58,237,.9), rgba(6,182,212,.85));
+  box-shadow: 0 12px 24px rgba(124,58,237,.18);
+  flex: 0 0 auto;
+}
+
+.info{
+  min-width: 0;
+  flex: 1;
+}
+
+.name{
+  margin:0;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.meta{
+  margin-top: 4px;
+  display:flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  color: rgba(234,240,255,.75);
+  font-size: 12.5px;
+}
+
+.badges{
+  display:flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items:flex-end;
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: 12px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.06);
+}
+
+.badge.status.active{
+  border-color: rgba(34,197,94,.35);
+  background: rgba(34,197,94,.14);
+}
+
+.badge.status.blocked{
+  border-color: rgba(239,68,68,.35);
+  background: rgba(239,68,68,.14);
+}
+
+.badge.plan.valid{
+  border-color: rgba(6,182,212,.35);
+  background: rgba(6,182,212,.14);
+}
+
+.badge.plan.expired{
+  border-color: rgba(245,158,11,.35);
+  background: rgba(245,158,11,.14);
+}
+
+/* Body */
+.member-body{
+  padding: 14px;
+}
+
+.stats{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.stat{
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 14px;
+  padding: 10px;
+}
+
+.stat .k{
+  font-size: 12px;
+  color: rgba(234,240,255,.72);
+}
+
+.stat .v{
+  margin-top: 6px;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+/* Actions (reuse your .btn styles from style.css if موجودة) */
+.member-actions{
+  display:flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.member-actions .btn{
+  flex: 1;
+  min-width: 90px;
+}
+
+/* Responsive */
+@media (max-width: 520px){
+  .page-head{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .page-head .actions{
+    width:100%;
+  }
+  .page-head .actions .btn{
+    width:100%;
+    justify-content:center;
+  }
+  .stats{
+    grid-template-columns: 1fr;
+  }
+  .badges{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:flex-end;
+  }
+}

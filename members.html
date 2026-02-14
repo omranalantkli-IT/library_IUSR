@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Library Lite - الأعضاء</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/members.css" />
+</head>
+
+<body>
+
+  <!-- ===== Topbar (نفس مشروعك) ===== -->
+  <header class="topbar">
+    <div class="container row">
+      <div class="brand">
+        <span class="logo"></span>
+        <span>Library Lite</span>
+      </div>
+      <nav class="nav">
+        <a href="index.html">الرئيسية</a>
+        <a href="books.html">الكتب</a>
+        <a class="active" href="members.html">الأعضاء</a>
+        <a href="loans.html">الإعارات</a>
+        <a href="add-book.html">إضافة كتاب</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container members-page">
+
+    <!-- ===== Header ===== -->
+    <section class="page-head">
+      <div>
+        <h1 class="title">الأعضاء</h1>
+        <p class="subtitle">إدارة أعضاء المكتبة (إضافة/بحث/فلترة/عرض الحالة)</p>
+      </div>
+
+      <div class="actions">
+        <a class="btn primary" href="add-member.html">+ إضافة عضو</a>
+      </div>
+    </section>
+
+    <!-- ===== Toolbar ===== -->
+    <section class="toolbar">
+      <div class="search-box">
+        <span class="icon">🔎</span>
+        <input class="search-input" type="text" placeholder="ابحث بالاسم / الهاتف / رقم العضوية..." />
+      </div>
+
+      <select class="filter-select">
+        <option value="all">كل الأعضاء</option>
+        <option value="active">نشط</option>
+        <option value="blocked">موقوف</option>
+      </select>
+
+      <select class="filter-select">
+        <option value="all">كل الاشتراكات</option>
+        <option value="valid">ساري</option>
+        <option value="expired">منتهي</option>
+      </select>
+    </section>
+
+    <!-- ===== KPIs ===== -->
+    <section class="kpis mini">
+      <div class="kpi">
+        <div class="label">إجمالي الأعضاء</div>
+        <div class="value">48</div>
+      </div>
+      <div class="kpi">
+        <div class="label">نشط</div>
+        <div class="value">41</div>
+      </div>
+      <div class="kpi">
+        <div class="label">موقوف</div>
+        <div class="value">7</div>
+      </div>
+      <div class="kpi">
+        <div class="label">اشتراك منتهي</div>
+        <div class="value">5</div>
+      </div>
+    </section>
+
+    <hr class="sep" />
+
+    <!-- ===== Members Grid ===== -->
+    <section class="members-grid">
+
+      <!-- Member Card -->
+      <article class="member-card">
+        <div class="member-head">
+          <div class="avatar" aria-hidden="true">أ</div>
+          <div class="info">
+            <h3 class="name">أحمد ناصر</h3>
+            <div class="meta">
+              <span>🆔 M-1001</span>
+              <span>📞 +90 530 111 0001</span>
+            </div>
+          </div>
+
+          <div class="badges">
+            <span class="badge status active">نشط</span>
+            <span class="badge plan valid">ساري</span>
+          </div>
+        </div>
+
+        <div class="member-body">
+          <div class="stats">
+            <div class="stat">
+              <div class="k">إعارات فعّالة</div>
+              <div class="v">2</div>
+            </div>
+            <div class="stat">
+              <div class="k">إجمالي الإعارات</div>
+              <div class="v">14</div>
+            </div>
+            <div class="stat">
+              <div class="k">آخر زيارة</div>
+              <div class="v">2026-02-05</div>
+            </div>
+          </div>
+
+          <div class="member-actions">
+            <button class="btn ghost">عرض</button>
+            <button class="btn warning">تعديل</button>
+            <button class="btn danger">إيقاف</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Member Card -->
+      <article class="member-card">
+        <div class="member-head">
+          <div class="avatar" aria-hidden="true">س</div>
+          <div class="info">
+            <h3 class="name">سارة خالد</h3>
+            <div class="meta">
+              <span>🆔 M-1002</span>
+              <span>📞 +90 530 222 0002</span>
+            </div>
+          </div>
+
+          <div class="badges">
+            <span class="badge status active">نشط</span>
+            <span class="badge plan expired">منتهي</span>
+          </div>
+        </div>
+
+        <div class="member-body">
+          <div class="stats">
+            <div class="stat">
+              <div class="k">إعارات فعّالة</div>
+              <div class="v">0</div>
+            </div>
+            <div class="stat">
+              <div class="k">إجمالي الإعارات</div>
+              <div class="v">6</div>
+            </div>
+            <div class="stat">
+              <div class="k">آخر زيارة</div>
+              <div class="v">2026-01-21</div>
+            </div>
+          </div>
+
+          <div class="member-actions">
+            <button class="btn ghost">عرض</button>
+            <button class="btn warning">تعديل</button>
+            <button class="btn danger">إيقاف</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Member Card -->
+      <article class="member-card">
+        <div class="member-head">
+          <div class="avatar" aria-hidden="true">م</div>
+          <div class="info">
+            <h3 class="name">محمد حسن</h3>
+            <div class="meta">
+              <span>🆔 M-1014</span>
+              <span>📞 +90 530 444 1212</span>
+            </div>
+          </div>
+
+          <div class="badges">
+            <span class="badge status blocked">موقوف</span>
+            <span class="badge plan valid">ساري</span>
+          </div>
+        </div>
+
+        <div class="member-body">
+          <div class="stats">
+            <div class="stat">
+              <div class="k">إعارات فعّالة</div>
+              <div class="v">1</div>
+            </div>
+            <div class="stat">
+              <div class="k">إجمالي الإعارات</div>
+              <div class="v">9</div>
+            </div>
+            <div class="stat">
+              <div class="k">آخر زيارة</div>
+              <div class="v">2025-12-28</div>
+            </div>
+          </div>
+
+          <div class="member-actions">
+            <button class="btn ghost">عرض</button>
+            <button class="btn warning">تعديل</button>
+            <button class="btn danger">تفعيل</button>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <footer class="footer">
+      <hr class="sep" />
+      <div>© Library Lite — Members</div>
+    </footer>
+
+  </main>
+
+</body>
+</html>
