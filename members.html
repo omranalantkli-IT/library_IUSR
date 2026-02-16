@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Library Lite - الأعضاء</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container row">
+    <div class="brand"><span class="logo"></span><span>Library Lite</span></div>
+    <nav class="nav">
+      <a href="index.html">الرئيسية</a>
+      <a href="books.html">الكتب</a>
+      <a class="active" href="members.html">الأعضاء</a>
+      <a href="loans.html">الإعارات</a>
+      <a href="add-book.html">إضافة كتاب</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <h1>الأعضاء</h1>
+    <p>عرض قائمة الأعضاء مع معلومات بسيطة.</p>
+  </section>
+
+  <div class="toolbar">
+    <div class="search">
+      <input type="search" placeholder="ابحث عن عضو..." />
+      <select>
+        <option>كل الأنواع</option>
+        <option>طالب</option>
+        <option>موظف</option>
+      </select>
+    </div>
+    <button class="btn primary" type="button">+ إضافة عضو (واجهة)</button>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>الاسم</th>
+        <th>النوع</th>
+        <th>رقم الهاتف</th>
+        <th>إعارات فعالة</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td> معتز</td>
+        <td>طالب</td>
+        <td>+31 6 00000000</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td> عمرااان</td>
+        <td>موظف</td>
+        <td>+31 6 11111111</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td> مصعب</td>
+        <td>طالب</td>
+        <td>+31 6 22222222</td>
+        <td>2</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <footer class="footer">
+    <hr class="sep" />
+    <div>اقترحوا مهام Jira لتطوير “إضافة/تعديل/حذف” لاحقاً.</div>
+  </footer>
+</main>
+
+</body>
+</html>
