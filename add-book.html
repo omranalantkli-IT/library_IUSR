@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Library Lite - إضافة كتاب</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container row">
+    <div class="brand"><span class="logo"></span><span>Library Lite</span></div>
+    <nav class="nav">
+      <a href="index.html">الرئيسية</a>
+      <a href="books.html">الكتب</a>
+      <a href="members.html">الأعضاء</a>
+      <a href="loans.html">الإعارات</a>
+      <a class="active" href="add-book.html">إضافة كتاب</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <h1>إضافة كتاب</h1>
+    <p>نموذج واجهة فقط. لاحقاً يمكن ربطه بحفظ بيانات.</p>
+  </section>
+
+  <section class="card">
+    <form>
+      <div class="form-grid">
+        <div class="field">
+          <label>عنوان الكتاب</label>
+          <input placeholder="مثال: Clean Code" required />
+        </div>
+        <div class="field">
+          <label>المؤلف</label>
+          <input placeholder="مثال: Robert C. Martin" required />
+        </div>
+        <div class="field">
+          <label>التصنيف</label>
+          <select required>
+            <option value="">اختر تصنيف</option>
+            <option>برمجة</option>
+            <option>قواعد بيانات</option>
+            <option>تطوير ذات</option>
+            <option>روايات</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>سنة النشر</label>
+          <input type="number" placeholder="مثال: 2008" min="1900" max="2100" />
+        </div>
+        <div class="field">
+          <label>رقم ISBN</label>
+          <input placeholder="مثال: 978-0132350884" />
+        </div>
+        <div class="field">
+          <label>الحالة</label>
+          <select>
+            <option>متاح</option>
+            <option>معار</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field" style="margin-top:12px">
+        <label>وصف مختصر</label>
+        <textarea rows="4" placeholder="وصف سريع عن الكتاب..."></textarea>
+        <div class="helper">*واجهة فقط — زر الحفظ لا يرسل لقاعدة بيانات.</div>
+      </div>
+
+      <div style="display:flex; gap:10px; justify-content:flex-start; margin-top:14px; flex-wrap:wrap;">
+        <button class="btn primary" type="button">حفظ (واجهة)</button>
+        <a class="btn" href="books.html">رجوع للكتب</a>
+      </div>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <hr class="sep" />
+    <div>ممكن تعملوا Task لاحق: “ربط النموذج بـ JS / LocalStorage” (إذا سمح الدكتور).</div>
+  </footer>
+</main>
+
+</body>
+</html>
